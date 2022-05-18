@@ -1,0 +1,471 @@
+*, ::after, ::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #fafafa;
+  font-family: 'Epilogue', sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+
+@media screen and (max-width: 766px) {
+  header {
+    width: 100%;
+  }
+  header .wrapper {
+    max-width: 75rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto;
+    padding: 1rem;
+    gap: 4.5rem;
+  }
+  header .wrapper .logo {
+    width: 4.9rem;
+  }
+  header .wrapper .logo img {
+    width: 100%;
+  }
+  header .wrapper .open-btn {
+    width: 1.3rem;
+    display: block;
+    cursor: pointer;
+    -webkit-transition: all 0.3s  linear;
+    transition: all 0.3s  linear;
+  }
+  header .wrapper .open-btn img {
+    width: 100%;
+  }
+  header .wrapper .nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+    min-height: 100vh;
+  }
+  header .wrapper .nav .nav-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 70%;
+    height: 100%;
+    background-color: #fafafa;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1.5rem 1rem;
+  }
+  header .wrapper .nav .nav-wrapper .close-btn {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  header .wrapper .nav .nav-wrapper .close-btn img {
+    width: 1rem;
+  }
+  header .wrapper .nav .nav-wrapper .nav-list {
+    list-style: none;
+  }
+  header .wrapper .nav .nav-wrapper .nav-list .nav-item {
+    display: block;
+    position: relative;
+    margin-right: 3.5rem;
+    /* This comment below is for the dropdown height */
+  }
+  header .wrapper .nav .nav-wrapper .nav-list .nav-item > a {
+    text-decoration: none;
+    color: dimgray;
+    font-size: 0.9rem;
+    display: block;
+    padding: 0.5rem 0;
+    font-weight: 500;
+  }
+  header .wrapper .nav .nav-wrapper .nav-list .nav-item .icon {
+    margin: 0 0.5rem;
+  }
+  header .wrapper .nav .nav-wrapper .nav-list .nav-item .dropdown {
+    max-height: 0;
+    position: static;
+    list-style: none;
+    overflow: hidden;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    background: #fafafa;
+    top: calc(100% + 1rem);
+    min-width: 8rem;
+  }
+  header .wrapper .nav .nav-wrapper .nav-list .nav-item .dropdown .dropdown-box {
+    padding: 0.75rem 1rem;
+    /* padding: 0 1rem; */
+  }
+  header .wrapper .nav .nav-wrapper .nav-list .nav-item .dropdown .dropdown-box .dropdown-content a {
+    text-decoration: none;
+    color: dimgray;
+    font-size: 0.9rem;
+    display: block;
+    padding: 0.5rem 0;
+  }
+  header .wrapper .nav .nav-wrapper .nav-list .nav-item .dropdown .dropdown-box .dropdown-content a .image {
+    margin-right: 0.5rem;
+  }
+  header .wrapper .nav .nav-wrapper .nav-list .nav-item .open {
+    max-height: 10rem;
+  }
+  header .wrapper .open {
+    right: 0;
+  }
+  header .wrapper .btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .wrapper .btns .btn {
+    text-decoration: none;
+    color: dimgray;
+    font-size: 1rem;
+    padding: 0.75rem 1.4rem;
+    text-align: center;
+    border: none;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  header .wrapper .btns .btn:hover {
+    color: #141414;
+  }
+  header .wrapper .btns .btn-outline {
+    border: 1px solid dimgray;
+    border-radius: 1.2rem;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .intro-img {
+    width: 100%;
+  }
+  .container .intro-img img {
+    width: 100%;
+  }
+  .container .intro-img .desktop {
+    display: none;
+  }
+  .container .intro-text {
+    text-align: center;
+    width: 100%;
+    padding: 0 1.2rem;
+  }
+  .container .intro-text .heading {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .container .intro-text .text {
+    color: dimgray;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    /*  max-width: 500px;
+               margin: 0 auto; */
+  }
+  .container .intro-text .btn {
+    text-decoration: none;
+    color: #fafafa;
+    font-size: 1rem;
+    padding: 0.75rem 1.4rem;
+    text-align: center;
+    border: none;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    display: inline-block;
+    margin-bottom: 2.5rem;
+  }
+  .container .intro-text .btn-fill {
+    padding: 0.8rem 1.3rem;
+    background-color: #141414;
+    border-radius: 0.5rem;
+    font-weight: 700;
+  }
+  .container .footer-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 1.5rem;
+  }
+  .container .footer-icon .footer-client img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  header {
+    width: 100%;
+  }
+  header .wrapper {
+    max-width: 75.55rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    padding: 1.2rem 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 3.5rem;
+  }
+  header .wrapper .logo {
+    width: 4.9rem;
+  }
+  header .wrapper .logo img {
+    width: 100%;
+  }
+  header .open-btn {
+    display: none;
+  }
+  header .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  header .nav .nav-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  header .nav .nav-wrapper .close-btn {
+    display: none;
+  }
+  header .nav .nav-wrapper nav .nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .nav .nav-wrapper nav .nav-list .nav-item {
+    display: inline-block;
+    position: relative;
+    margin-right: 3.5rem;
+  }
+  header .nav .nav-wrapper nav .nav-list .nav-item > a {
+    text-decoration: none;
+    color: dimgray;
+    font-size: 0.9rem;
+    display: block;
+    padding: 0.5rem 0;
+    font-weight: 500;
+  }
+  header .nav .nav-wrapper nav .nav-list .nav-item > a .icon {
+    margin: 0 0.5rem;
+  }
+  header .nav .nav-wrapper nav .nav-list .nav-item .right {
+    right: 0;
+  }
+  header .nav .nav-wrapper nav .nav-list .nav-item .dropdown {
+    background-color: white;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* padding: 0 1rem; */
+    min-width: 9rem;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    /*  top: 2rem; */
+    top: calc(100% + 0.5rem);
+    border-radius: 0.5rem;
+    list-style: none;
+  }
+  header .nav .nav-wrapper nav .nav-list .nav-item .dropdown .dropdown-box {
+    padding: 0.75rem 1.5rem;
+    /* .dropdown-content:not(:last-child) {
+                                            margin-bottom: 0.5rem;
+                                        } */
+  }
+  header .nav .nav-wrapper nav .nav-list .nav-item .dropdown .dropdown-box .dropdown-content a {
+    text-decoration: none;
+    color: dimgray;
+    font-size: 0.9rem;
+    display: block;
+    padding: 0.5rem 0;
+  }
+  header .nav .nav-wrapper nav .nav-list .nav-item .dropdown .dropdown-box .dropdown-content a .image {
+    margin-right: 0.5rem;
+    /* continue from here */
+  }
+  header .nav .nav-wrapper nav .nav-list .nav-item .open {
+    max-height: 20rem;
+  }
+  header .nav .nav-wrapper .btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* flex: 0.2 10px; */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .nav .nav-wrapper .btns .btn {
+    text-decoration: none;
+    color: dimgray;
+    font-size: 1rem;
+    border: none;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    padding: 0.75rem 1.4rem;
+  }
+  header .nav .nav-wrapper .btns .btn-outline {
+    border: 1px solid dimgray;
+    border-radius: 0.9rem;
+    padding: 0.75rem 1.4rem;
+    text-align: center;
+  }
+  main {
+    max-width: 64rem;
+    padding-top: 1rem;
+    margin: 0 auto;
+    margin-top: 2.7rem;
+  }
+  main .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .container .intro-img {
+    width: 42%;
+  }
+  main .container .intro-img .mobile {
+    display: none;
+  }
+  main .container .intro-img .desktop {
+    width: 100%;
+  }
+  main .container .intro-text {
+    width: 45%;
+  }
+  main .container .intro-text .heading {
+    font-size: 4.3rem;
+    color: #141414;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+  main .container .intro-text .text {
+    color: dimgray;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+  }
+  main .container .intro-text .btn {
+    text-decoration: none;
+    color: #fafafa;
+    font-size: 1rem;
+    padding: 0.75rem 1.4rem;
+    text-align: center;
+    border: none;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    display: inline-block;
+    margin-bottom: 6.5rem;
+  }
+  main .container .intro-text .btn-fill {
+    padding: 0.8rem 1.3rem;
+    background-color: #141414;
+    border-radius: 0.5rem;
+    font-weight: 700;
+  }
+  main .container .intro-text .footer-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .container .intro-text .footer-icon .footer-client img {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
